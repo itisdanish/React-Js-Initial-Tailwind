@@ -1,0 +1,341 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+.container {
+  /* width: 80%;
+    margin: auto; */
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* border-bottom: 1px dashed black; */
+  /* border-radius: 10px; */
+  position: sticky;
+  top: 0;
+  background-color: white;
+  /* Ensure the header doesn't overlap with content */
+  z-index: 1000;
+  /* Ensure the header stays above other content */
+  box-shadow: 0 2px 0px rgba(156, 156, 156, 0.227);
+  /* Subtle shadow on the bottom side */
+}
+
+.logo {
+  width: 30px;
+  margin-left: 30;
+}
+
+.nav-item ul {
+  display: flex;
+  list-style-type: none;
+  font-size: 15px;
+  padding: 0px 10px;
+  color: #3d4152;
+}
+
+.nav-item ul li {
+  font-weight: bold;
+  font-size: 22px;
+  padding: 10px;
+  margin: 10px;
+  cursor: pointer;
+}
+.nav-item ul li:hover {
+  color: #fc8019;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.res-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.res-card {
+  padding: 5px;
+  /* Padding inside the card */
+  width: 250px;
+  /* Fixed width of the card */
+  height: auto;
+  /* Fixed height of the card */
+  margin: 5px;
+  /* Margin around the card */
+  background-color: #e5e5e532;
+  /* Background color of the card */
+  border-radius: 15px;
+  /* Rounded corners of the card */
+  overflow: hidden;
+  /* Prevent overflow */
+  display: flex;
+  /* Flexbox layout */
+  flex-direction: column;
+  /* Arrange children in a column */
+}
+a {
+  text-decoration: none;
+}
+.res-card:hover {
+  border: 1px dashed #2a2a2a;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.res-icon {
+  color: #28a745;
+}
+
+.search {
+  padding: 10px;
+}
+
+.res-logo {
+  /* width: 100%;
+    height: auto; */
+
+  border-radius: 10px;
+  width: 250px;
+  /* Set the width you want */
+  height: 150px;
+  /* Set the height you want */
+  object-fit: cover;
+}
+
+h4 {
+  font-weight: bolder;
+}
+
+h5 {
+  margin: 5 0;
+}
+
+.filter-btn {
+  padding: 10px 30px;
+  border-radius: 4px;
+  height: fit-content;
+  border: none;
+  background-color: #fc8019;
+  color: white;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.filter {
+  display: flex;
+  align-items: center;
+}
+
+.search-btn {
+  padding: 12px 30px;
+  border-radius: 4px;
+  border: none;
+  background-color: #fc8019;
+  color: white;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.search-box {
+  padding: 11px;
+  height: auto;
+  border: none;
+  background-color: #d5d5d5;
+  border-radius: 5px;
+}
+
+.search-box:focus {
+  background-color: #ffc18e;
+  color: white;
+  outline: none;
+}
+
+.loading-text {
+  text-align: center;
+  padding: 10px 30px;
+  border-radius: 4px;
+  border: none;
+  background-color: #e5e5e590;
+  color: #4e4e4e;
+  margin: 10px;
+}
+
+.shimmer-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.shimer-card {
+  padding: 5px;
+  /* Padding inside the card */
+  width: 250px;
+  /* Fixed width of the card */
+  height: 350px;
+  /* Fixed height of the card */
+  margin: 5px;
+  /* Margin around the card */
+  background-color: #e5e5e56e;
+  /* Background color of the card */
+  border-radius: 10px;
+  /* Rounded corners of the card */
+  overflow: hidden;
+  /* Prevent overflow */
+  display: flex;
+  /* Flexbox layout */
+  flex-direction: column;
+  /* Arrange children in a column */
+}
+
+.login-btn {
+  padding: 10px 30px;
+  border-radius: 4px;
+  border: none;
+  background-color: #fc8019;
+  color: white;
+  margin: 10px;
+  cursor: pointer;
+}
+/* Restaurant Item Card */
+.menu-card {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  /* border-bottom: 1px dotted black; */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.menu-card-image img {
+  width: 250px;
+  height: 180px;
+  border-radius: 10px;
+  margin-right: 20px;
+  object-fit: cover;
+}
+
+.menu-card-details {
+  flex: 1;
+}
+
+.menu-card-details h3 {
+  margin: 0;
+  font-size: 20px;
+  color: #333;
+}
+
+.menu-card-details .price {
+  font-size: 18px;
+  color: #888;
+  margin: 10px 0;
+}
+
+.menu-card-details p {
+  margin: 0;
+  font-size: 16px;
+  color: #555;
+}
+
+.menu-card-details .more {
+  color: #007bff;
+  cursor: pointer;
+}
+/* User Card */
+.userCard {
+  border: 1px solid black;
+  width: 500px;
+  padding: 10px;
+  border-radius: 10px;
+}
+/* Food */
+
+.container-fd {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 100vh; */
+  /* background-color: #f5f5f5; */
+}
+
+.recipe-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 800px;
+  /* transition: transform 0.3s; */
+}
+
+/* .recipe-card:hover {
+    transform: scale(1.05);
+} */
+
+.recipe-image {
+  width: 100%;
+  height: auto;
+}
+
+.recipe-content {
+  display: flex;
+  padding: 20px;
+}
+
+.recipe-left,
+.recipe-right {
+  flex: 1;
+  padding: 10px;
+}
+
+.recipe-left {
+  border-right: 1px solid #ddd;
+}
+
+.recipe-name {
+  font-size: 24px;
+  color: #333;
+}
+
+.recipe-category,
+.recipe-tags {
+  font-size: 14px;
+  color: #666;
+  margin: 5px 0;
+}
+
+.recipe-ingredients {
+  list-style-type: none;
+  padding: 0;
+  text-align: left;
+  margin: 10px 0;
+}
+
+.recipe-ingredients li {
+  background-color: #f0f0f0;
+  margin: 5px 0;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.recipe-description {
+  font-size: 16px;
+  color: #555;
+  margin: 10px 0;
+}
+
+.get-meal-button {
+  background-color: #ff6347;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.get-meal-button:hover {
+  background-color: #e5533d;
+}
