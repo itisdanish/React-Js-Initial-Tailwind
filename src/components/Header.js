@@ -17,8 +17,8 @@ const Header = () => {
 
   return (
     <nav className='flex justify-between shadow-md mb-2 bg-amber-400'>
-      <div className='logo-container m-4'>
-        <img className='w-12 m-auto' src='' alt='test' />
+      <div className='logo-container mx-4'>
+        <img className='w-32 m-auto' src={LOGO_URL} alt='test' />
       </div>
 
       <div className='flex items-center'>
@@ -38,7 +38,7 @@ const Header = () => {
           </li>
           <li className='px-2'>
             {' '}
-            <Link to='/about'>About Us </Link>
+            <Link to='/about'>About Us</Link>
           </li>
           <li className='px-2'>
             {' '}
