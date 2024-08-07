@@ -12,7 +12,7 @@ const ItemList = ({ items }) => {
           (item) => (
             <div
               key={item.card.info.id}
-              className='menu-card flex mx-2 my-4 rounded-lg border-b-2 p-2'
+              className='menu-card flex mx-2 my-4 py-6 border-b-2 p-2'
             >
               <div className='menu-card-details m-2 flex-1 text-gray-800'>
                 <h3 className='font-bold'>{item?.card?.info?.name}</h3>
@@ -47,7 +47,7 @@ const ItemList = ({ items }) => {
                       </span>
                     </div>
                   )}
-                <p className='font-light text-gray-800 text-sm'>
+                <p className='font-medium text-gray-600 text-sm'>
                   {item?.card?.info?.description}
                 </p>
               </div>

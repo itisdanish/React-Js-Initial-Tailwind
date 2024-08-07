@@ -1,14 +1,18 @@
 import { LOGO_URL } from '../utils/constants';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import useOnlineStatus from '../utils/useOnlineStatus';
+import UserContext from '../utils/userContext';
 
 const Header = () => {
   const [btnNameReact, setBtn] = useState('Log In');
   const onlineStatus = useOnlineStatus();
   // console.log("header")
+
+  const { loggedInUser } = useContext(UserContext);
+  console.log(loggedInUser);
 
   //
   useEffect(() => {
@@ -22,19 +26,19 @@ const Header = () => {
       </div>
 
       <div className='flex items-center'>
-        <ul className='flex p-2 m-4 font-bold'>
+        <ul className='flex p-2 m-4'>
           {' '}
           <li className='px-2'>
             {' '}
             <Link to='/'>Online : {onlineStatus ? '👽' : '🚨'}</Link>
           </li>
-          <li className='px-2'>
-            {' '}
-            <Link to='/grocery'>Grocery : {onlineStatus ? '👽' : '🚨'}</Link>
-          </li>
           <li className='px-2 hover:text-orange-500'>
             {' '}
             <Link to='/'>Home</Link>
+          </li>
+          <li className='px-2'>
+            {' '}
+            <Link to='/grocery'>Grocery</Link>
           </li>
           <li className='px-2'>
             {' '}
@@ -57,6 +61,7 @@ const Header = () => {
           >
             {btnNameReact}
           </button>
+          <button className='px-2 font-bold'>{loggedInUser}</button>
         </ul>
       </div>
     </nav>
