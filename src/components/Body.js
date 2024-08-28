@@ -3,11 +3,13 @@ import RestaurantCard, {
   withCloseLabel,
   withOpenLabel,
 } from './RestaurantCard';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import Shimmer from './Shimmer';
 import { Link } from 'react-router-dom';
 import useOnlineStatus from '../utils/useOnlineStatus';
 import GameBoard from './GameBoard';
+import UserContext from '../utils/userContext';
+
 const Body = () => {
   const [listOfRest, setResList] = useState([]);
   const [searchText, setSearchText] = useState('');
@@ -46,6 +48,8 @@ const Body = () => {
         <GameBoard />
       </div>
     );
+
+  const { setUserName, loggedInUser } = useContext(UserContext);
 
   if (listOfRest.length === 0) {
     return <Shimmer />;
@@ -89,6 +93,12 @@ const Body = () => {
             >
               Search
             </button>
+            <input
+              className='border-green-700 border-0 bg-green-100 w-96 focus:outline-dashed py-2 px-4 rounded-md'
+              placeholder='Type Here......'
+              onChange={(e) => setUserName(e.target.value)}
+              value={loggedInUser}
+            />
           </div>
           {/* Filter BTN */}
           {/* <div className='m-4 p-4'>

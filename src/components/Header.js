@@ -5,6 +5,7 @@ import { useState, useEffect, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import useOnlineStatus from '../utils/useOnlineStatus';
 import UserContext from '../utils/userContext';
+import UseTest from '../utils/UseTest';
 
 const Header = () => {
   const [btnNameReact, setBtn] = useState('Log In');
@@ -13,6 +14,8 @@ const Header = () => {
 
   const { loggedInUser } = useContext(UserContext);
   console.log(loggedInUser);
+  const { name } = useContext(UseTest);
+
 
   //
   useEffect(() => {
@@ -30,7 +33,7 @@ const Header = () => {
           {' '}
           <li className='px-2'>
             {' '}
-            <Link to='/'>Online : {onlineStatus ? '👽' : '🚨'}</Link>
+            <Link to='/'>{name}: {onlineStatus ? '👽' : '🚨'}</Link>
           </li>
           <li className='px-2 hover:text-orange-500'>
             {' '}
@@ -50,7 +53,7 @@ const Header = () => {
           </li>
           <li className='px-2'>
             <Link to='/cart'>
-              Cart <FontAwesomeIcon icon={faShoppingCart} />
+              <FontAwesomeIcon icon={faShoppingCart} />5
             </Link>
           </li>
           <button
